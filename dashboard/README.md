@@ -11,3 +11,5 @@ pip install numpy pandas scipy matplotlib seaborn jupyter streamlit babel
 ```
 streamlit run dashboard.py
 ```
+or access this link : 
+muhghifari-projekanalisisaqi-dashboarddashboard-l71lfh.streamlit.app
