@@ -16,7 +16,8 @@ annual_df = df.resample(rule='Y', on='datetime').agg({
   "SO2": "mean",
   "NO2": "mean",
   "CO": "mean",
-  "O3": "mean"
+  "O3": "mean",
+  "TEMP": "mean"
 })
 
 annual_df.index = annual_df.index.strftime('%Y')
@@ -86,13 +87,9 @@ plt.legend()
 st.pyplot(fig)
 
 
-st.subheader("Temperatur")
-temp_df = df.resample(rule='Y', on='datetime').agg({
-  "TEMP": "mean"
-})
-temp_df.index = temp_df.index.strftime('%Y')
+st.subheader("Temperature")
 fig = plt.figure(figsize=(10,6))
-plt.plot(temp_df.index, temp_df["TEMP"], label="TEMP")
+plt.plot(annual_df.index, annual_df["TEMP"], label="TEMP")
 plt.xlabel("Year")
 plt.ylabel("°C")
 plt.legend()
