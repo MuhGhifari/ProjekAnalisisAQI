@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import streamlit as st
 
 
-df = pd.read_csv("../all_data.csv")
+df = pd.read_csv("exported.csv")
     
 df['datetime'] = pd.to_datetime(df['datetime'])
 
